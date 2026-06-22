@@ -86,12 +86,12 @@ const services = [
 ];
 
 const achievements = [
-  { icon: FiAward, title: "350+ Successful Hires", desc: "Across tech, finance, and operations roles." },
-  { icon: FiTrendingUp, title: "32% Retention Lift", desc: "Engineered through engagement and culture programs." },
-  { icon: FaGraduationCap, title: "Leadership Academy", desc: "Designed and launched a 12-month leadership program." },
-  { icon: FiBriefcase, title: "HR Transformation", desc: "Modernized HR systems for 6 mid-sized organizations." },
-  { icon: FaHeart, title: "Culture Overhaul", desc: "Raised employee NPS from 14 to 62 in one year." },
-  { icon: FaGlobeAfrica, title: "Pan-African Network", desc: "120+ affiliates onboarded across 14 countries." },
+  { icon: FiAward, img: impactHires, title: "350+ Successful Hires", desc: "Across tech, finance, and operations roles." },
+  { icon: FiTrendingUp, img: impactRetention, title: "32% Retention Lift", desc: "Engineered through engagement and culture programs." },
+  { icon: FaGraduationCap, img: impactAcademy, title: "Leadership Academy", desc: "Designed and launched a 12-month leadership program." },
+  { icon: FiBriefcase, img: impactTransformation, title: "HR Transformation", desc: "Modernized HR systems for 6 mid-sized organizations." },
+  { icon: FaHeart, img: impactCulture, title: "Culture Overhaul", desc: "Raised employee NPS from 14 to 62 in one year." },
+  { icon: FaGlobeAfrica, img: impactAfrica, title: "Pan-African Network", desc: "120+ affiliates onboarded across 14 countries." },
 ];
 
 const testimonials = [
@@ -108,11 +108,11 @@ const brand = [
 ];
 
 const posts = [
-  { tag: "Recruitment", title: "The 2026 Recruitment Trends Every Leader Must Know", read: "6 min" },
-  { tag: "Culture", title: "Workplace Culture: The Invisible Engine of Performance", read: "5 min" },
-  { tag: "Engagement", title: "Beyond Perks: Designing Real Employee Engagement", read: "7 min" },
-  { tag: "Leadership", title: "How to Develop Leaders Who Develop Others", read: "8 min" },
-  { tag: "Future of Work", title: "Hybrid, Async, AI: The New Operating System of Work", read: "9 min" },
+  { tag: "Recruitment", img: blogRecruitment, title: "The 2026 Recruitment Trends Every Leader Must Know", read: "6 min" },
+  { tag: "Culture", img: blogCulture, title: "Workplace Culture: The Invisible Engine of Performance", read: "5 min" },
+  { tag: "Engagement", img: blogEngagement, title: "Beyond Perks: Designing Real Employee Engagement", read: "7 min" },
+  { tag: "Leadership", img: blogLeadership, title: "How to Develop Leaders Who Develop Others", read: "8 min" },
+  { tag: "Future of Work", img: blogFuture, title: "Hybrid, Async, AI: The New Operating System of Work", read: "9 min" },
 ];
 
 export default function Portfolio() {
