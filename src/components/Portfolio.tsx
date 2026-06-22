@@ -146,7 +146,7 @@ export default function Portfolio() {
   const heroY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
 
   const nav = [
-    ["About", "about"], ["Skills", "skills"], ["Experience", "experience"],
+    ["Home", "hero"], ["About", "about"], ["Skills", "skills"], ["Experience", "experience"],
     ["Services", "services"], ["Insights", "insights"], ["Contact", "contact"],
   ] as const;
 
