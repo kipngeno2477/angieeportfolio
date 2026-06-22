@@ -1,11 +1,12 @@
 [build]
-  command = "npm run build"
+  command = "npm install && npm run build"
   publish = ".output/public"
-  functions = ".output/server"
 
-# Netlify will respect this file automatically. If you connect this GitHub repo in Netlify,
-# the build command and publish directory are set from here.
+[build.environment]
+  NODE_VERSION = "20.19.0"
+  NPM_FLAGS = "--legacy-peer-deps"
 
-[context.production.environment]
-  # Pin a Node version if you want; Netlify will use your project's default otherwise.
-  NODE_VERSION = "18"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
