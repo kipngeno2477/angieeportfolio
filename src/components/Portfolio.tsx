@@ -10,6 +10,17 @@ import {
 } from "react-icons/fa";
 import heroAsset from "@/assets/angelica-hero.jpg.asset.json";
 import aboutAsset from "@/assets/angelica-about.jpg.asset.json";
+import blogRecruitment from "@/assets/blog-recruitment.jpg";
+import blogCulture from "@/assets/blog-culture.jpg";
+import blogEngagement from "@/assets/blog-engagement.jpg";
+import blogLeadership from "@/assets/blog-leadership.jpg";
+import blogFuture from "@/assets/blog-future.jpg";
+import impactHires from "@/assets/impact-hires.jpg";
+import impactRetention from "@/assets/impact-retention.jpg";
+import impactAcademy from "@/assets/impact-academy.jpg";
+import impactTransformation from "@/assets/impact-transformation.jpg";
+import impactCulture from "@/assets/impact-culture.jpg";
+import impactAfrica from "@/assets/impact-africa.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
