@@ -1,10 +1,9 @@
 [build]
-  command = "npm install && npm run build"
-  publish = ".output/public"
+  command = "npm install && npx vite build --config vite.spa.config.ts"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20.19.0"
-  NPM_FLAGS = "--legacy-peer-deps"
 
 [[redirects]]
   from = "/*"
