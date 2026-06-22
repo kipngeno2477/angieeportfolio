@@ -132,4 +132,10 @@
   }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
+  .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+  .bg-gradient-animated {
+    background: linear-gradient(120deg, #10B981, #6366f1, #F59E0B, #10B981);
+    background-size: 300% 300%;
+    animation: gradient-shift 12s ease infinite;
+  }
 }
