@@ -456,14 +456,14 @@ export default function Portfolio() {
       <Section id="insights" eyebrow="Blog" title="Insights from the HR frontline" muted>
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((p, i) => (
-            <motion.article key={p.title} variants={fadeUp}
-              className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-elegant hover:-translate-y-1 transition">
-              <div className="aspect-[16/10] gradient-hero relative overflow-hidden">
-                <div className="absolute inset-0 opacity-30" style={{
-                  background: `radial-gradient(circle at ${30 + i * 15}% 50%, #10B981, transparent 60%)`
-                }} />
-                <div className="absolute bottom-4 left-4 glass text-white text-xs px-3 py-1 rounded-full">{p.tag}</div>
+          {posts.map((p) => (
+            <motion.article key={p.title} variants={fadeUp} whileHover={{ y: -8 }}
+              className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-elegant transition">
+              <div className="aspect-[16/10] relative overflow-hidden">
+                <img src={p.img} alt={p.title} loading="lazy" width={1024} height={640}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-4 left-4 glass text-white text-xs px-3 py-1 rounded-full backdrop-blur-md">{p.tag}</div>
               </div>
               <div className="p-6">
                 <h3 className="font-display text-lg leading-snug group-hover:text-secondary transition">{p.title}</h3>
