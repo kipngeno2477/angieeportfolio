@@ -24,8 +24,8 @@
   --color-gold: var(--gold);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --font-display: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-display: "Poppins", "Noto Sans Arabic", sans-serif;
+  --font-sans: "Poppins", "Noto Sans Arabic", sans-serif;
 }
 
 :root {
@@ -76,13 +76,31 @@
 @layer base {
   * { border-color: var(--color-border); }
   body {
-    background-color: var(--color-background);
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 25%, #fef3c7 60%, #ede9fe 100%);
+    background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  .dark body {
+    background: linear-gradient(135deg, #0f172a 0%, #042f2e 50%, #1e1b4b 100%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; font-weight: 600; }
   html { scroll-behavior: smooth; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(3deg); }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 @layer utilities {
@@ -114,4 +132,10 @@
   }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
+  .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+  .bg-gradient-animated {
+    background: linear-gradient(120deg, #10B981, #6366f1, #F59E0B, #10B981);
+    background-size: 300% 300%;
+    animation: gradient-shift 12s ease infinite;
+  }
 }

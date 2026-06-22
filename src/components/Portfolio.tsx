@@ -10,6 +10,17 @@ import {
 } from "react-icons/fa";
 import heroAsset from "@/assets/angelica-hero.jpg.asset.json";
 import aboutAsset from "@/assets/angelica-about.jpg.asset.json";
+import blogRecruitment from "@/assets/blog-recruitment.jpg";
+import blogCulture from "@/assets/blog-culture.jpg";
+import blogEngagement from "@/assets/blog-engagement.jpg";
+import blogLeadership from "@/assets/blog-leadership.jpg";
+import blogFuture from "@/assets/blog-future.jpg";
+import impactHires from "@/assets/impact-hires.jpg";
+import impactRetention from "@/assets/impact-retention.jpg";
+import impactAcademy from "@/assets/impact-academy.jpg";
+import impactTransformation from "@/assets/impact-transformation.jpg";
+import impactCulture from "@/assets/impact-culture.jpg";
+import impactAfrica from "@/assets/impact-africa.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -75,12 +86,12 @@ const services = [
 ];
 
 const achievements = [
-  { icon: FiAward, title: "350+ Successful Hires", desc: "Across tech, finance, and operations roles." },
-  { icon: FiTrendingUp, title: "32% Retention Lift", desc: "Engineered through engagement and culture programs." },
-  { icon: FaGraduationCap, title: "Leadership Academy", desc: "Designed and launched a 12-month leadership program." },
-  { icon: FiBriefcase, title: "HR Transformation", desc: "Modernized HR systems for 6 mid-sized organizations." },
-  { icon: FaHeart, title: "Culture Overhaul", desc: "Raised employee NPS from 14 to 62 in one year." },
-  { icon: FaGlobeAfrica, title: "Pan-African Network", desc: "120+ affiliates onboarded across 14 countries." },
+  { icon: FiAward, img: impactHires, title: "350+ Successful Hires", desc: "Across tech, finance, and operations roles." },
+  { icon: FiTrendingUp, img: impactRetention, title: "32% Retention Lift", desc: "Engineered through engagement and culture programs." },
+  { icon: FaGraduationCap, img: impactAcademy, title: "Leadership Academy", desc: "Designed and launched a 12-month leadership program." },
+  { icon: FiBriefcase, img: impactTransformation, title: "HR Transformation", desc: "Modernized HR systems for 6 mid-sized organizations." },
+  { icon: FaHeart, img: impactCulture, title: "Culture Overhaul", desc: "Raised employee NPS from 14 to 62 in one year." },
+  { icon: FaGlobeAfrica, img: impactAfrica, title: "Pan-African Network", desc: "120+ affiliates onboarded across 14 countries." },
 ];
 
 const testimonials = [
@@ -97,11 +108,11 @@ const brand = [
 ];
 
 const posts = [
-  { tag: "Recruitment", title: "The 2026 Recruitment Trends Every Leader Must Know", read: "6 min" },
-  { tag: "Culture", title: "Workplace Culture: The Invisible Engine of Performance", read: "5 min" },
-  { tag: "Engagement", title: "Beyond Perks: Designing Real Employee Engagement", read: "7 min" },
-  { tag: "Leadership", title: "How to Develop Leaders Who Develop Others", read: "8 min" },
-  { tag: "Future of Work", title: "Hybrid, Async, AI: The New Operating System of Work", read: "9 min" },
+  { tag: "Recruitment", img: blogRecruitment, title: "The 2026 Recruitment Trends Every Leader Must Know", read: "6 min" },
+  { tag: "Culture", img: blogCulture, title: "Workplace Culture: The Invisible Engine of Performance", read: "5 min" },
+  { tag: "Engagement", img: blogEngagement, title: "Beyond Perks: Designing Real Employee Engagement", read: "7 min" },
+  { tag: "Leadership", img: blogLeadership, title: "How to Develop Leaders Who Develop Others", read: "8 min" },
+  { tag: "Future of Work", img: blogFuture, title: "Hybrid, Async, AI: The New Operating System of Work", read: "9 min" },
 ];
 
 export default function Portfolio() {
@@ -375,13 +386,20 @@ export default function Portfolio() {
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {achievements.map(a => (
-            <motion.div key={a.title} variants={fadeUp}
-              className="glass-light rounded-2xl p-6 hover:shadow-elegant hover:-translate-y-1 transition group">
-              <div className="h-12 w-12 rounded-xl gradient-gold grid place-items-center text-white mb-4 group-hover:rotate-6 transition">
-                <a.icon size={22} />
+            <motion.div key={a.title} variants={fadeUp} whileHover={{ y: -8, scale: 1.02 }}
+              className="glass-light rounded-2xl overflow-hidden hover:shadow-elegant transition group">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img src={a.img} alt={a.title} loading="lazy" width={800} height={500}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute top-3 left-3 h-11 w-11 rounded-xl gradient-gold grid place-items-center text-white shadow-lg group-hover:rotate-6 transition">
+                  <a.icon size={20} />
+                </div>
               </div>
-              <h3 className="font-display text-lg mb-1">{a.title}</h3>
-              <p className="text-sm text-muted-foreground">{a.desc}</p>
+              <div className="p-6">
+                <h3 className="font-display text-lg mb-1">{a.title}</h3>
+                <p className="text-sm text-muted-foreground">{a.desc}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -438,14 +456,14 @@ export default function Portfolio() {
       <Section id="insights" eyebrow="Blog" title="Insights from the HR frontline" muted>
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((p, i) => (
-            <motion.article key={p.title} variants={fadeUp}
-              className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-elegant hover:-translate-y-1 transition">
-              <div className="aspect-[16/10] gradient-hero relative overflow-hidden">
-                <div className="absolute inset-0 opacity-30" style={{
-                  background: `radial-gradient(circle at ${30 + i * 15}% 50%, #10B981, transparent 60%)`
-                }} />
-                <div className="absolute bottom-4 left-4 glass text-white text-xs px-3 py-1 rounded-full">{p.tag}</div>
+          {posts.map((p) => (
+            <motion.article key={p.title} variants={fadeUp} whileHover={{ y: -8 }}
+              className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-elegant transition">
+              <div className="aspect-[16/10] relative overflow-hidden">
+                <img src={p.img} alt={p.title} loading="lazy" width={1024} height={640}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-4 left-4 glass text-white text-xs px-3 py-1 rounded-full backdrop-blur-md">{p.tag}</div>
               </div>
               <div className="p-6">
                 <h3 className="font-display text-lg leading-snug group-hover:text-secondary transition">{p.title}</h3>
