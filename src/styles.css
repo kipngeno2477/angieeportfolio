@@ -24,8 +24,8 @@
   --color-gold: var(--gold);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --font-display: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-display: "Poppins", "Noto Sans Arabic", sans-serif;
+  --font-sans: "Poppins", "Noto Sans Arabic", sans-serif;
 }
 
 :root {
