@@ -6,10 +6,14 @@ import {
 } from "react-icons/fi";
 import {
   FaUsers, FaHandshake, FaChartLine, FaUserTie, FaBullseye, FaRocket, FaGlobeAfrica,
-  FaStar, FaQuoteLeft, FaLightbulb, FaHeart, FaBalanceScale, FaGraduationCap
+  FaStar, FaQuoteLeft, FaLightbulb, FaHeart, FaBalanceScale, FaGraduationCap,
+  FaWhatsapp, FaInstagram
 } from "react-icons/fa";
 import heroAsset from "@/assets/angelica-hero.jpg.asset.json";
 import aboutAsset from "@/assets/angelica-about.jpg.asset.json";
+import heroImg from "@/assets/indownloader.app_picture_0136527001782146140.jpg";
+import aboutImg from "@/assets/indownloader.app_picture_0719311001782133463.jpg";
+import logoImg from "@/assets/Screenshot 2026-06-22 194535.png";
 import blogRecruitment from "@/assets/blog-recruitment.jpg";
 import blogCulture from "@/assets/blog-culture.jpg";
 import blogEngagement from "@/assets/blog-engagement.jpg";
@@ -176,15 +180,16 @@ export default function Portfolio() {
         className="fixed top-0 inset-x-0 z-50 glass-light"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <button onClick={() => scrollTo("hero")} className="font-display text-xl tracking-tight">
-            Angelica<span className="text-gradient-emerald">.</span>
+          <button onClick={() => scrollTo("hero")} className="flex items-center gap-2">
+            <img src={logoImg} alt="Angelica Logo" className="h-12 w-auto object-contain" />
+            <span className="font-display text-xl font-bold tracking-wide text-foreground">Angelica</span>
           </button>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
             {nav.map(([label, id]) => (
               <button key={id} onClick={() => scrollTo(id)}
-                className="text-muted-foreground hover:text-foreground transition relative group">
+                className="text-foreground font-semibold tracking-wide hover:text-secondary transition relative group">
                 {label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 group-hover:w-full bg-secondary transition-all" />
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 group-hover:w-full bg-secondary transition-all duration-300" />
               </button>
             ))}
           </nav>
@@ -208,7 +213,7 @@ export default function Portfolio() {
               className="lg:hidden overflow-hidden glass-light border-t border-border">
               <div className="px-6 py-4 flex flex-col gap-3">
                 {nav.map(([label, id]) => (
-                  <button key={id} onClick={() => scrollTo(id)} className="text-left py-2">{label}</button>
+                  <button key={id} onClick={() => scrollTo(id)} className="text-left py-2 font-semibold text-foreground tracking-wide">{label}</button>
                 ))}
               </div>
             </motion.div>
@@ -262,7 +267,7 @@ export default function Portfolio() {
             transition={{ delay: 0.4, duration: 0.8 }} className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
               <div className="absolute inset-0 gradient-emerald opacity-20 mix-blend-overlay z-10" />
-              <img src={heroAsset.url} alt="Angelica Amina, HR Manager"
+              <img src={heroImg} alt="Angelica Amina, HR Manager"
                 className="w-full h-full object-cover" loading="eager" />
             </div>
             <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}
@@ -285,7 +290,7 @@ export default function Portfolio() {
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.7 }} className="lg:col-span-5">
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-elegant">
-              <img src={aboutAsset.url} alt="Angelica Amina portrait" className="w-full h-full object-cover" />
+              <img src={aboutImg} alt="Angelica Amina portrait" className="w-full h-full object-cover" />
             </div>
             <div className="absolute" />
           </motion.div>
@@ -484,7 +489,7 @@ export default function Portfolio() {
             className="space-y-4">
             {[
               { icon: FiMail, label: "Email", value: "Angelicaombacho@gmail.com", href: "mailto:Angelicaombacho@gmail.com" },
-              { icon: FiPhone, label: "Phone", value: "0799 902 607", href: "tel:+254799902607" },
+              { icon: FiPhone, label: "Phone", value: "0114 748 365", href: "tel:+254114748365" },
               { icon: FiLinkedin, label: "LinkedIn", value: "@Angelica Amina", href: "#" },
               { icon: FiTwitter, label: "X (Twitter)", value: "@Angelica_amina", href: "https://x.com/Angelica_amina" },
               { icon: FiMapPin, label: "Based in", value: "Nairobi, Kenya · Available globally", href: "#" },
@@ -500,6 +505,27 @@ export default function Portfolio() {
                 </div>
               </a>
             ))}
+
+            {/* Quick contact buttons */}
+            <div className="pt-2">
+              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Message me directly</p>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://wa.me/254114748365" target="_blank" rel="noreferrer"
+                  className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-semibold text-sm hover:brightness-110 hover:-translate-y-0.5 transition shadow-md">
+                  <FaWhatsapp size={18} /> WhatsApp
+                </a>
+                <a href="https://instagram.com/Angelica_amina" target="_blank" rel="noreferrer"
+                  className="flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold text-sm hover:brightness-110 hover:-translate-y-0.5 transition shadow-md"
+                  style={{ background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)" }}>
+                  <FaInstagram size={18} /> Instagram
+                </a>
+                <a href="https://x.com/Angelica_amina" target="_blank" rel="noreferrer"
+                  className="flex items-center gap-2 px-5 py-3 rounded-full bg-black text-white font-semibold text-sm hover:bg-neutral-800 hover:-translate-y-0.5 transition shadow-md">
+                  <FiTwitter size={18} /> Twitter / X
+                </a>
+              </div>
+            </div>
+
             <div className="rounded-2xl overflow-hidden h-48 border border-border">
               <iframe
                 title="Nairobi map"
@@ -562,7 +588,7 @@ export default function Portfolio() {
               <h4 className="text-white font-medium mb-4 text-sm">Reach out</h4>
               <ul className="space-y-2 text-sm">
                 <li>Angelicaombacho@gmail.com</li>
-                <li>+254 799 902 607</li>
+                <li>+254 114 748 365</li>
                 <li>Nairobi, Kenya</li>
               </ul>
             </div>
