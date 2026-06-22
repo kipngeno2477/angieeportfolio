@@ -386,13 +386,20 @@ export default function Portfolio() {
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {achievements.map(a => (
-            <motion.div key={a.title} variants={fadeUp}
-              className="glass-light rounded-2xl p-6 hover:shadow-elegant hover:-translate-y-1 transition group">
-              <div className="h-12 w-12 rounded-xl gradient-gold grid place-items-center text-white mb-4 group-hover:rotate-6 transition">
-                <a.icon size={22} />
+            <motion.div key={a.title} variants={fadeUp} whileHover={{ y: -8, scale: 1.02 }}
+              className="glass-light rounded-2xl overflow-hidden hover:shadow-elegant transition group">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img src={a.img} alt={a.title} loading="lazy" width={800} height={500}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute top-3 left-3 h-11 w-11 rounded-xl gradient-gold grid place-items-center text-white shadow-lg group-hover:rotate-6 transition">
+                  <a.icon size={20} />
+                </div>
               </div>
-              <h3 className="font-display text-lg mb-1">{a.title}</h3>
-              <p className="text-sm text-muted-foreground">{a.desc}</p>
+              <div className="p-6">
+                <h3 className="font-display text-lg mb-1">{a.title}</h3>
+                <p className="text-sm text-muted-foreground">{a.desc}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
