@@ -7,35 +7,43 @@ import {
 import {
   FaUsers, FaHandshake, FaChartLine, FaUserTie, FaBullseye, FaRocket, FaGlobeAfrica,
   FaStar, FaQuoteLeft, FaLightbulb, FaHeart, FaBalanceScale, FaGraduationCap,
-  FaWhatsapp, FaInstagram
+  FaWhatsapp
 } from "react-icons/fa";
-import heroImg from "@/assets/indownloader.app_picture_0136527001782146140.jpg";
-import aboutImg from "@/assets/indownloader.app_picture_0719311001782133463.jpg";
-import logoImg from "@/assets/Screenshot 2026-06-22 194535.png";
+import heroImg from "@/assets/Hero.png.jpg";
+import aboutImg from "@/assets/About.png.jpg";
+import logoImg from "@/assets/logo.png";
 import achievementVideo from "@/assets/Angie achiev.mp4";
-import blogRecruitment from "@/assets/blog-recruitment.jpg";
-import blogCulture from "@/assets/blog-culture.jpg";
-import blogEngagement from "@/assets/blog-engagement.jpg";
-import blogLeadership from "@/assets/blog-leadership.jpg";
-import impactHires from "@/assets/impact-hires.jpg";
-import impactRetention from "@/assets/WhatsApp Image 2026-06-24 at 00.42.47.jpeg";
-import impactAcademy from "@/assets/impact-academy.jpg";
-import impactTransformation from "@/assets/ang1.jpeg";
-import impactCulture from "@/assets/impact-culture.jpg";
+import blogRecruitment from "@/assets/rep1.png";
+import blogCulture from "@/assets/rep2.png";
+import blogEngagement from "@/assets/rep3.png";
+import blogLeadership from "@/assets/imgST2.jpg";
+import impactHires from "@/assets/rep1.png";
+import impactRetention from "@/assets/rep2.png";
+import impactAcademy from "@/assets/rep3.png";
+import impactTransformation from "@/assets/igamingtech.jpeg";
+import impactCulture from "@/assets/imgST2.jpg";
 import impactAfrica from "@/assets/impact-africa.jpg";
-import summitGallery1 from "@/assets/ang3.jpeg";
-import summitGallery2 from "@/assets/ang4.jpeg";
+import summitGallery1 from "@/assets/rep1.png";
+import summitGallery2 from "@/assets/rep2.png";
 import summitGallery3 from "@/assets/ang5.jpeg";
-import summitGallery4 from "@/assets/ang2.jpeg";
-import summitGallery5 from "@/assets/ang6.jpeg";
-import summitGallery6 from "@/assets/Screenshot 2026-06-24 195119.png";
-import womenInGamingImg from "@/assets/Screenshot 2026-06-24 195052.png";
-import megapariAfricaHRLogo from "@/assets/Screenshot 2026-06-24 195134.png";
-import linebetLogo from "@/assets/Screenshot 2026-06-24 195629.png";
-import eatcLogo from "@/assets/Screenshot 2026-06-24 195520.png";
-import stellarbetsLogo from "@/assets/Screenshot 2026-06-24 195537.png";
-import megapariLogo from "@/assets/indownloader.app_picture_0279074001782133450.jpg";
-import womenEastAfricaImg from "@/assets/snappwhasapp.jpeg";
+import summitGallery4 from "@/assets/rep3.png";
+import summitGallery5 from "@/assets/igamingtech.jpeg";
+import summitGallery6 from "@/assets/imgST2.jpg";
+import womenInGamingImg from "@/assets/rep1.png";
+import megapariAfricaHRLogo from "@/assets/megaparilogo.png.jpeg";
+import linebetLogo from "@/assets/linebetlogo.png.png";
+import eatcLogo from "@/assets/eatc logo.png";
+import stellarbetsLogo from "@/assets/stellarbetlogo.png.png";
+import megapariLogo from "@/assets/megapariL.jpeg";
+import melbetLogo from "@/assets/melbetlogo.png.jpeg";
+import womenEastAfricaImg from "@/assets/rep2.png";
+import badgePro from "@/assets/Badgepro.png.jpeg";
+import badge1 from "@/assets/Badge1png.jpeg";
+import badge2 from "@/assets/badge2.png.jpeg";
+import badge3 from "@/assets/badge3.png.jpeg";
+import badge4 from "@/assets/badge4.png.jpeg";
+import gtsaVideo from "@/assets/GTSA.png.mp4";
+import archieveVideo from "@/assets/archieve.png.mp4";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -82,22 +90,22 @@ const skillLevels: Record<string, number> = {
 
 const experience = [
   { 
-    role: "Affiliate Manager", 
-    org: "Linebet", 
-    logo: linebetLogo,
-    duration: "2023 — Present", 
+    role: "Marketing Lead & Affiliate Management Specialist", 
+    org: "NDA", 
+    logo: badgePro,
+    duration: "Jan 2026 — Present", 
     type: "Full-time",
     points: [
-      "Managed affiliate partnerships and marketing campaigns",
-      "Developed strategic relationships with key partners across Africa",
-      "Increased affiliate-driven revenue through targeted recruitment"
+      "Specialized in affiliate network development and management",
+      "Built relationships with key affiliate partners",
+      "Monitored performance metrics and optimized campaigns"
     ] 
   },
   { 
     role: "Human Resource Manager / Recruiter", 
     org: "StellarBets", 
     logo: stellarbetsLogo,
-    duration: "2022 — 2023", 
+    duration: "July 2025 — May 2026", 
     type: "Full-time",
     points: [
       "Led end-to-end recruitment for multiple departments",
@@ -106,10 +114,22 @@ const experience = [
     ] 
   },
   { 
+    role: "Affiliate Manager", 
+    org: "Linebet", 
+    logo: linebetLogo,
+    duration: "May 2025 — Oct 2025", 
+    type: "Full-time",
+    points: [
+      "Managed affiliate partnerships and marketing campaigns",
+      "Developed strategic relationships with key partners across Africa",
+      "Increased affiliate-driven revenue through targeted recruitment"
+    ] 
+  },
+  { 
     role: "HR Recruiter / Team Leader / Affiliate Manager", 
     org: "Megapari", 
     logo: megapariAfricaHRLogo,
-    duration: "2021 — Present", 
+    duration: "Aug 2024 — Jun 2025", 
     type: "Full-time",
     points: [
       "Led recruitment initiatives for iGaming operations across East Africa",
@@ -118,22 +138,10 @@ const experience = [
     ] 
   },
   { 
-    role: "Affiliate Management Specialist", 
-    org: "NDA", 
-    logo: logoImg,
-    duration: "2020 — 2021", 
-    type: "Contract",
-    points: [
-      "Specialized in affiliate network development and management",
-      "Built relationships with key affiliate partners",
-      "Monitored performance metrics and optimized campaigns"
-    ] 
-  },
-  { 
-    role: "HR Assistant & Marketing Lead", 
+    role: "HR Assistant", 
     org: "East African Tax Consulting", 
     logo: eatcLogo,
-    duration: "2019 — 2020", 
+    duration: "May 2023 — Aug 2023", 
     type: "Internship",
     points: [
       "Assisted with recruitment, onboarding, and employee relations",
@@ -154,11 +162,11 @@ const services = [
 ];
 
 const achievements = [
-  { icon: FiAward, img: impactHires, title: "Gaming Tech Summit Africa", desc: "Represented companies at GTSA and Megapari events in Nairobi, Kenya." },
-  { icon: FiTrendingUp, img: impactRetention, title: "iGaming AFRIKA Summit", desc: "Attended as HR Manager/Recruiter for Megapari - connecting with industry professionals." },
-  { icon: FaGraduationCap, img: impactAcademy, title: "SiGMA Africa Conference", desc: "Participated in premium networking events across multiple iGaming summits." },
-  { icon: FiBriefcase, img: impactTransformation, title: "Megapari Africa HR", desc: "Led HR initiatives and voice chat sessions with HR Managers across Africa and Asia." },
-  { icon: FaHeart, img: womenInGamingImg, title: "Industry Representation", desc: "Proven ability to represent companies at major iGaming industry events." },
+  { icon: FiAward, img: badge1, title: "SiGMA Africa Conference", desc: "Represented companies at GTSA and Megapari events in capetown, south Africa." },
+  { icon: FiTrendingUp, img: badge2, title: "iGaming AFRIKA Summit", desc: "Attended Igaming Afrika summit- connecting with industry professionals, Sarit Expo center, Nairobi, Kenya." },
+  { icon: FaGraduationCap, img: badge3, title: "IGaming Future East Africa", desc: "Participated in premium networking events across multiple iGaming summits , Carnivore, Nairobi kenya." },
+  { icon: FiBriefcase, img: badge4, title: " SiGMA Africa", desc: "Attended GTSA SIGMA Africa IN capetown, south Africa." },
+  { icon: FaHeart, img: badgePro, title: "Industry Representation", desc: "Proven ability to represent companies at major iGaming industry events." },
   { icon: FaGlobeAfrica, img: impactAfrica, title: "Pan-African Networking", desc: "Built meaningful connections on the growth and future of gaming in Africa." },
 ];
 
@@ -177,8 +185,8 @@ const brand = [
 
 const posts = [
   { tag: "iGaming", img: blogRecruitment, title: "Building Strong Recruitment Pipelines in the iGaming Industry", read: "6 min" },
-  { tag: "HR Management", img: blogCulture, title: "Effective Payroll and Performance Review Systems", read: "5 min" },
-  { tag: "Networking", img: blogEngagement, title: "Lessons from Gaming Tech Summit Africa and SiGMA", read: "7 min" },
+  { tag: "Gaming industry", img: blogCulture, title: "Engaging and connecting with industry professionals", read: "5 min" },
+  { tag: "Networking", img: blogEngagement, title: "Women in Gaming Association East Africa ", read: "7 min" },
   { tag: "Affiliate Management", img: blogLeadership, title: "Growing Affiliate Networks Across African Markets", read: "8 min" },
   { tag: "Industry Events", img: summitGallery5, title: "The Future of iGaming in Africa: Insights from Industry Summits", read: "9 min" },
 ];
@@ -488,21 +496,45 @@ export default function Portfolio() {
             </h2>
           </motion.div>
           
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative max-w-3xl mx-auto">
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
-              <video 
-                className="w-full h-full object-cover"
-                controls
-                poster={heroImg}
-                preload="metadata"
-              >
-                <source src={achievementVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, scale: 0.95, x: -20 }} whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
+              className="relative">
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
+                <video 
+                  className="w-full h-full object-cover"
+                  controls
+                  poster={heroImg}
+                  preload="metadata"
+                >
+                  <source src={achievementVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="mt-3 text-center">
+                <p className="text-sm text-white/80 font-medium">Achievement Highlights</p>
+              </div>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, scale: 0.95, x: 20 }} whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative">
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
+                <video 
+                  className="w-full h-full object-cover"
+                  controls
+                  poster={heroImg}
+                  preload="metadata"
+                >
+                  <source src={archieveVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="mt-3 text-center">
+                <p className="text-sm text-white/80 font-medium">Industry Archive</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -818,6 +850,37 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Company Badges Section */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16 pt-12 border-t border-gray-200">
+          <h3 className="text-xl font-display text-center mb-8 text-gray-700">
+            Represented at Major Industry Events
+          </h3>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {[
+              { logo: badgePro, name: "Professional Badge" },
+              { logo: linebetLogo, name: "Linebet" },
+              { logo: melbetLogo, name: "Melbet" },
+              { logo: megapariAfricaHRLogo, name: "Megapari" },
+              { logo: stellarbetsLogo, name: "StellarBets" },
+            ].map((company, i) => (
+              <motion.div key={company.name} 
+                initial={{ opacity: 0, scale: 0.8 }} 
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }} 
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="group relative">
+                <div className="h-24 w-24 rounded-2xl bg-white border-2 border-gray-200 group-hover:border-blue-400 shadow-md group-hover:shadow-xl transition-all duration-300 overflow-hidden flex items-center justify-center p-3">
+                  <img src={company.logo} alt={`${company.name} logo`} 
+                    className="h-full w-full object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </Section>
 
       {/* Gaming Summit Photo Gallery */}
@@ -830,21 +893,20 @@ export default function Portfolio() {
               Gaming Tech Summit Africa Highlights
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Representing Megapari at major iGaming industry events across Africa
+              Representing Various companies  at major Gaming industry events across Africa
             </p>
           </motion.div>
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { img: summitGallery1, title: "Golden Race", location: "Cape Town, South Africa" },
+              { img: summitGallery1, title: "IGaming AFRIKA summit", location: "Nairobi , Kenya" },
               { img: summitGallery2, title: "Igaming Afrika summit ", location: "Nairobi, Kenya" },
-              { img: summitGallery6, title: "Aviator studio", location: "Nairobi, Kenya" },
-              { img: megapariLogo, title: "Mrs. Angelicah HR", location: "Nairobi, Kenya" }, 
+              { img: summitGallery6, title: "Mrs Angelicah HR Africa", location: "Nairobi, Kenya" },
+              { img: megapariLogo, title: "Megapari Africa", location: "Nairobi, Kenya" }, 
               { img: summitGallery3, title: "Voice Chat with HR managers", location: "Nairobi, Kenya" },
-              { img: summitGallery1, title: "Women in Gaming Association East Africa", location: "Nairobi, Kenya" },
-              { img: womenEastAfricaImg, title: "Technology support ", location: "Nairobi, Kenya" },
-              { img: summitGallery5, title: "Megapari Africa HR", location: "Nairobi, Kenya" },
+            
+              { img: summitGallery5, title: "Gaming Tech Summit Africa", location: "Nairobi, Kenya" },
             ].map((photo, idx) => (
               <motion.div key={idx} variants={fadeUp} whileHover={{ y: -10, scale: 1.02 }}
                 className="group relative rounded-2xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
@@ -865,14 +927,14 @@ export default function Portfolio() {
                         <span>•</span>
                         <div className="flex items-center gap-1">
                           <FiAward size={16} />
-                          <span>iGaming Summit</span>
+                          <span>IGaming Africa</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Corner badge */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-br from-emerald-500 to-amber-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
+                  {/* Corner badge - Hidden */}
+                  <div className="hidden absolute top-4 right-4 bg-gradient-to-br from-emerald-500 to-amber-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
                     GTSA 2025
                   </div>
                 </div>
@@ -981,7 +1043,7 @@ export default function Portfolio() {
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             className="space-y-4">
             {[
-              { icon: FiMail, label: "Email", value: "Angelica@megapari.com", href: "mailto:Angelica@megapari.com" },
+              { icon: FiMail, label: "Email", value: "Angelicaombacho@gmail.com", href: "mailto:Angelicaombacho@gmail.com" },
               { icon: FiPhone, label: "Phone", value: "0114 748 365", href: "tel:+254114748365" },
               { icon: FiLinkedin, label: "LinkedIn", value: "@angelica-hr", href: "https://www.linkedin.com/in/angelica-hr" },
               { icon: FiTwitter, label: "X (Twitter)", value: "@Angelica_amina", href: "https://x.com/Angelica_amina" },
@@ -1007,10 +1069,9 @@ export default function Portfolio() {
                   className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-semibold text-sm hover:brightness-110 hover:-translate-y-0.5 transition shadow-md">
                   <FaWhatsapp size={18} /> WhatsApp
                 </a>
-                <a href="https://instagram.com/Angelica_amina" target="_blank" rel="noreferrer"
-                  className="flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold text-sm hover:brightness-110 hover:-translate-y-0.5 transition shadow-md"
-                  style={{ background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)" }}>
-                  <FaInstagram size={18} /> Instagram
+                <a href="https://www.linkedin.com/in/angelica-hr" target="_blank" rel="noreferrer"
+                  className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#0A66C2] text-white font-semibold text-sm hover:brightness-110 hover:-translate-y-0.5 transition shadow-md">
+                  <FiLinkedin size={18} /> LinkedIn
                 </a>
                 <a href="https://x.com/Angelica_amina" target="_blank" rel="noreferrer"
                   className="flex items-center gap-2 px-5 py-3 rounded-full bg-black text-white font-semibold text-sm hover:bg-neutral-800 hover:-translate-y-0.5 transition shadow-md">
@@ -1066,7 +1127,7 @@ export default function Portfolio() {
               <div className="flex gap-4 mt-6">
                 <a href="https://x.com/Angelica_amina" target="_blank" rel="noreferrer" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiTwitter /></a>
                 <a href="https://www.linkedin.com/in/angelica-hr" target="_blank" rel="noreferrer" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiLinkedin /></a>
-                <a href="mailto:Angelica@megapari.com" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiMail /></a>
+                <a href="mailto:Angelicaombacho@gmail.com" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiMail /></a>
               </div>
             </div>
             <div>
@@ -1080,7 +1141,7 @@ export default function Portfolio() {
             <div>
               <h4 className="text-white font-semibold mb-4 text-sm">Reach out</h4>
               <ul className="space-y-2 text-sm">
-                <li>Angelica@megapari.com</li>
+                <li>Angelicaombacho@gmail.com</li>
                 <li>+254 114 748 365</li>
                 <li>Nairobi, Kenya</li>
               </ul>
