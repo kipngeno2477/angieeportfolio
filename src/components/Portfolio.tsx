@@ -374,7 +374,7 @@ export default function Portfolio() {
               transition={{ delay: 1 }}
               className="mt-12 flex gap-6 text-white/70">
               <a href="https://x.com/Angelica_amina" target="_blank" rel="noreferrer" className="hover:text-white transition"><FiTwitter size={20} /></a>
-              <a href="https://www.linkedin.com/in/angelica-hr" target="_blank" rel="noreferrer" className="hover:text-white transition"><FiLinkedin size={20} /></a>
+              <a href="https://www.linkedin.com/in/angelica-hr-b60b87191/" target="_blank" rel="noreferrer" className="hover:text-white transition"><FiLinkedin size={20} /></a>
               <a href="mailto:Angelica@megapari.com" className="hover:text-white transition"><FiMail size={20} /></a>
             </motion.div>
           </motion.div>
@@ -1045,7 +1045,7 @@ export default function Portfolio() {
             {[
               { icon: FiMail, label: "Email", value: "Angelicaombacho@gmail.com", href: "mailto:Angelicaombacho@gmail.com" },
               { icon: FiPhone, label: "Phone", value: "0114 748 365", href: "tel:+254114748365" },
-              { icon: FiLinkedin, label: "LinkedIn", value: "@angelica-hr", href: "https://www.linkedin.com/in/angelica-hr" },
+              { icon: FiLinkedin, label: "LinkedIn", value: "@angelica-hr-b60b87191", href: "https://www.linkedin.com/in/angelica-hr-b60b87191/" },
               { icon: FiTwitter, label: "X (Twitter)", value: "@Angelica_amina", href: "https://x.com/Angelica_amina" },
               { icon: FiMapPin, label: "Based in", value: "Nairobi, Kenya · Available globally", href: "#" },
             ].map(c => (
@@ -1069,7 +1069,7 @@ export default function Portfolio() {
                   className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-semibold text-sm hover:brightness-110 hover:-translate-y-0.5 transition shadow-md">
                   <FaWhatsapp size={18} /> WhatsApp
                 </a>
-                <a href="https://www.linkedin.com/in/angelica-hr" target="_blank" rel="noreferrer"
+                <a href="https://www.linkedin.com/in/angelica-hr-b60b87191/" target="_blank" rel="noreferrer"
                   className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#0A66C2] text-white font-semibold text-sm hover:brightness-110 hover:-translate-y-0.5 transition shadow-md">
                   <FiLinkedin size={18} /> LinkedIn
                 </a>
@@ -1126,7 +1126,7 @@ export default function Portfolio() {
               <p className="mt-3 max-w-md text-sm">HR Professional specializing in iGaming recruitment, affiliate management, and team leadership.</p>
               <div className="flex gap-4 mt-6">
                 <a href="https://x.com/Angelica_amina" target="_blank" rel="noreferrer" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiTwitter /></a>
-                <a href="https://www.linkedin.com/in/angelica-hr" target="_blank" rel="noreferrer" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiLinkedin /></a>
+                <a href="https://www.linkedin.com/in/angelica-hr-b60b87191/" target="_blank" rel="noreferrer" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiLinkedin /></a>
                 <a href="mailto:Angelicaombacho@gmail.com" className="h-10 w-10 grid place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition"><FiMail /></a>
               </div>
             </div>
